@@ -162,9 +162,7 @@ function renderNavbar(C) {
   if (C.sections.faq)         navItems.push({ href: '#faq-section',           label: 'FAQ' });
   if (C.sections.contact)     navItems.push({ href: '#contact-section',       label: 'Contacto' });
 
-  const ctaLink = C.floatingButtons?.whatsapp?.enabled && C.contact?.whatsapp
-    ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.floatingButtons.whatsapp.message || 'Hola!')}`
-    : `#contact-section`;
+  const ctaLink = C.whatsapp || (typeof CONFIG !== 'undefined' ? CONFIG.whatsapp : 'https://wa.me/teredicrom?s=t');
 
   links.innerHTML = navItems.map(item =>
     `<li><a href="${item.href}">${item.label}</a></li>`
@@ -173,7 +171,7 @@ function renderNavbar(C) {
       <img src="./logos de botones para redes sociales/BOTON-CARRITO-DE-COMPRA.webp" alt="Carrito" id="nav-cart-img" style="width:28px;height:28px;object-fit:contain;">
       <span class="cart-badge" id="cart-badge">0</span>
     </li>` : ''}
-  <li class="nav-cta"><a href="${ctaLink}" class="btn btn-primary btn-invert btn-sm" id="nav-cta-btn">Contactar</a></li>`;
+  <li class="nav-cta"><a href="${ctaLink}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-invert btn-sm" id="nav-cta-btn">Contactar</a></li>`;
 
   // Mobile toggle
   toggle.addEventListener('click', () => {
@@ -1130,11 +1128,11 @@ function renderContact(C) {
               <span class="contact-item-value">${co.address}</span>
             </div>
           </div>` : ''}
-          ${co?.schedule ? `<div class="contact-item">
+          ${(co?.schedule || C.schedule) ? `<div class="contact-item">
             <div class="contact-item-icon">🕐</div>
             <div>
               <div class="contact-item-label">Horario</div>
-              <span class="contact-item-value">${co.schedule}</span>
+              <span class="contact-item-value">Horario: ${C.schedule || co?.schedule || '24/7'}</span>
             </div>
           </div>` : ''}
         </div>
@@ -1243,9 +1241,14 @@ function renderFooter(C) {
         <div class="footer-brand-name">${C.businessName}</div>
         <p class="footer-brand-desc">${C.businessDescription || C.businessSlogan}</p>
         <div class="social-links">
-          ${Object.entries(C.social || {}).filter(([,v]) => v).map(([k, url]) => `
-            <a href="${url}" target="_blank" rel="noopener" class="social-link" id="footer-social-${k}" title="${k}">${socialIconMap[k] || '🔗'}</a>
-          `).join('')}
+          ${Object.entries(C.social || {}).filter(([,v]) => v).map(([k, url]) => {
+            let linkUrl = url;
+            if (k === 'instagram') linkUrl = C.instagram || (typeof CONFIG !== 'undefined' && CONFIG.instagram) || url;
+            if (k === 'linkedin') linkUrl = C.linkedin || (typeof CONFIG !== 'undefined' && CONFIG.linkedin) || url;
+            return `
+            <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="social-link" id="footer-social-${k}" title="${k}">${socialIconMap[k] || '🔗'}</a>
+          `;
+          }).join('')}
         </div>
       </div>
       <div>
@@ -1406,10 +1409,15 @@ function buildSocialLinks(social, context) {
     linkedin:  '<img src="./logos de botones para redes sociales/BOTON-LINKND.webp" alt="LinkedIn" class="hero-sub-icon">',
     pinterest: '📌', behance: '🎨'
   };
-  return Object.entries(social).filter(([,v]) => v).map(([k, url]) => `
-    <a href="${url}" target="_blank" rel="noopener" class="hero-social-link social-link"
+  return Object.entries(social).filter(([,v]) => v).map(([k, url]) => {
+    let linkUrl = url;
+    if (k === 'instagram') linkUrl = (typeof CONFIG !== 'undefined' && CONFIG.instagram) || url;
+    if (k === 'linkedin') linkUrl = (typeof CONFIG !== 'undefined' && CONFIG.linkedin) || url;
+    return `
+    <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="hero-social-link social-link"
        id="${context}-social-${k}" title="${k}">${icons[k] || '🔗'}</a>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function closeModal(overlayId) {

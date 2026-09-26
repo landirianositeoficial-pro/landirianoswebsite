@@ -6,6 +6,9 @@
 const CONFIG = {
   email: "landirianositeoficial@gmail.com",
   whatsapp: "https://wa.me/teredicrom?s=t",
+  instagram: "https://www.instagram.com/landirianositeoficial/",
+  linkedin: "https://linkedin.com",
+  schedule: "24/7",
   access_key: "72981d4f-66f6-4fba-8fb6-75bfa899c4b1",
 
   templateType: "professional",
@@ -32,8 +35,8 @@ const CONFIG = {
     products: false, digital: false, testimonials: true, faq: true, contact: true
   },
 
-  contact: { whatsapp: "https://wa.me/teredicrom?s=t", email: "landirianositeoficial@gmail.com", schedule: "Lun-Vie 9am–7pm" },
-  social: { instagram: "https://instagram.com/landirianos.site", linkedin: "https://linkedin.com/company/landirianos-site" },
+  contact: { whatsapp: "https://wa.me/teredicrom?s=t", email: "landirianositeoficial@gmail.com", schedule: "24/7" },
+  social: { instagram: "https://www.instagram.com/landirianositeoficial/", linkedin: "https://linkedin.com" },
 
   floatingButtons: {
     whatsapp: { enabled: true, number: "https://wa.me/teredicrom?s=t", message: "Hola! Vengo de su web y me interesan los planes de desarrollo 🚀", pulse: true, position: "bottom-right" },
