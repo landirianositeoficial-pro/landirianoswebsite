@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://googleapis.com; font-src 'self' https://fonts.gstatic.com https://gstatic.com; img-src 'self' data: https: ./assets/ ./LOGO%20DE%20LANDIRIANO%20SITE/ ./LOGO%20ANIMADO%20LANDIRIANO%20SITE/ ./logos%20de%20botones%20para%20redes%20sociales/; connect-src 'self' https://web3forms.com https://api.web3forms.com; media-src 'self' ./LOGO%20ANIMADO%20LANDIRIANO%20SITE/; frame-src 'self'; object-src 'none'; upgrade-insecure-requests;">
+  <title>LANDIRIANOS SITE | Desarrollo Web Premium y Apps Corporativas</title>
+  <meta name="description" content="Agencia líder en desarrollo web premium, automatización de ecommerce con IA, ciberseguridad avanzada y optimización SEO. Maximiza el ROI de tu negocio.">
+  <meta name="keywords" content="desarrollo web, landing page, apps, landirianos, software profesional">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LANDIRIANOS SITE | Ecosistemas Web de Alto Rendimiento">
+  <meta property="og:description" content="Desarrollo, alojamiento y mantenimiento de ecosistemas web de alto rendimiento.">
+  <meta property="og:image" content="images/preview-landirianos.webp">
+  <meta property="og:url" content="https://landirianos.site">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO: Títulos y metas inyectados por app.js desde config -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="preload" href="./assets/FONDOS PARA SECCIONES/SECCION-SERVICIOS.webp" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.min.css">
+  <link rel="manifest" href="./manifest.json">
+
+  <link rel="alternate" href="https://landirianos.site" hreflang="x-default" />
+  <link rel="alternate" href="https://landirianos.sitees-ve" hreflang="es-VE" />
+  <link rel="alternate" href="https://landirianos.sitees-es" hreflang="es-ES" />
+  <link rel="alternate" href="https://landirianos.siteen-us" hreflang="en-US" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "LANDIRIANOS SITE",
+    "image": "https://landirianos.site",
+    "@id": "https://landirianos.site",
+    "url": "https://landirianos.site",
+    "priceRange": "$$$",
+    "address": [
+      { "@type": "PostalAddress", "addressCountry": "US", "addressLocality": "Miami" },
+      { "@type": "PostalAddress", "addressCountry": "ES", "addressLocality": "Madrid" },
+      { "@type": "PostalAddress", "addressCountry": "VE", "addressLocality": "Caracas" }
+    ],
+    "areaServed": [
+      { "@type": "Country", "name": "Estados Unidos" },
+      { "@type": "Country", "name": "España" },
+      { "@type": "Country", "name": "Venezuela" }
+    ],
+    "description": "Estudio especializado en ingeniería digital, desarrollo de ecosistemas web premium, ecommerce automatizados, ciberseguridad avanzada y optimización SEO internacional con enfoque en la maximización del ROI.",
+    "offers": {
+      "@type": "Offer",
+      "itemOffered": [
+        { "@type": "Service", "name": "Desarrollo Web Premium e Ingeniería Digital" },
+        { "@type": "Service", "name": "Estructuras de Comercio Electrónico Automatizado" },
+        { "@type": "Service", "name": "Embudos de Conversión y Funnel Marketing" },
+        { "@type": "Service", "name": "Auditorías Anti-Hacking y Pentesting Web" }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="landirianos-intro-layer" style="position: fixed; inset: 0; background: radial-gradient(circle at center, rgba(10, 10, 16, 0.4) 0%, rgba(7, 7, 12, 0.95) 100%), url('./assets/FONDOS PARA SECCIONES/FONDODESECCION01.webp') center/cover no-repeat fixed; z-index: 99999; display: flex; justify-content: center; align-items: center; opacity: 1; transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.6s;">
+    <!-- Reproductor optimizado sin barras de control nativas -->
+    <video id="intro-video" autoplay muted playsinline style="width: 100%; height: 100%; max-width: 600px; max-height: 600px; object-fit: contain;">
+      <source src="./LOGO ANIMADO LANDIRIANO SITE/VIDEOPRESENTACIONANDIRIANOWEB.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo">MARCA</a>
+      <ul class="nav-links" id="nav-links"></ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero-section"></section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about-section" class="hidden-section"></section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services-section" class="hidden-section"></section>
+
+  <!-- ═══ PORTFOLIO ═══ -->
+  <section id="portfolio-section" class="hidden-section"></section>
+
+  <!-- ═══ PRODUCTS ═══ -->
+  <section id="products-section" class="hidden-section"></section>
+
+  <!-- ═══ DIGITAL PRODUCTS ═══ -->
+  <section id="digital-section" class="hidden-section"></section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section id="testimonials-section" class="hidden-section"></section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq-section" class="hidden-section"></section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact-section" class="hidden-section"></section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer"></footer>
+
+  <!-- ═══ OVERLAYS & MODALS ═══ -->
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar"></div>
+
+  <!-- Product Modal -->
+  <div class="modal-overlay" id="product-modal-overlay">
+    <div class="modal-content" id="product-modal-content"></div>
+  </div>
+
+  <!-- Access Code Modal (digital products) -->
+  <div class="modal-overlay" id="access-modal-overlay">
+    <div class="modal-content access-modal" id="access-modal-content"></div>
+  </div>
+
+  <!-- Plan Details Modal -->
+  <div class="modal-overlay" id="plan-modal-overlay">
+    <div class="modal-content plan-modal" id="plan-modal-content"></div>
+  </div>
+
+
+  <!-- ═══ FLOATING BUTTONS ═══ -->
+  <div class="floating-buttons" id="floating-buttons"></div>
+
+  <!-- ═══ MUSIC PLAYER ═══ -->
+  <div class="music-bubble" id="music-bubble" style="display:none;"></div>
+
+  <script src="./themes.js?v=3.0"></script>
+  <script src="./config.js?v=3.0"></script>
+  <script src="./app.min.js?v=3.0"></script>
+</body>
+<!-- Trigger: Fuerza despliegue estático final unificado v2.0.1 -->
+</html>

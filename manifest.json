@@ -1,0 +1,18 @@
+{
+  "short_name": "LANDIRIANOS",
+  "name": "LANDIRIANOS SITE - Ingeniería Digital",
+  "description": "Desarrollo Web Premium, Automatización Ecommerce e Infraestructura Web de Alto Rendimiento.",
+  "icons": [
+    {
+      "src": "./LOGO DE LANDIRIANO SITE/logo-landiriano.webp",
+      "type": "image/webp",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#0a0a0f",
+  "theme_color": "#00d4ff",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}
